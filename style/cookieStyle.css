@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 17, 2020, 12:55:04 PM
+    Author     : dominiclanza
+*/
+.cookieStyle {
+                background-color: blanchedalmond;
+                border-radius: 0.25rem;
+                padding: 0.25rem;
+                margin: 1rem;
+        }
+
+       img{
+           width: 100px;
+           padding-bottom: 2px;  
+       }
+       
+       button{
+           display: flex;
+           flex-wrap: wrap;
+           margin-top: 5px;
+           line-height: 30px;
+           font-weight: bold;
+           padding: 0 10px;
+           background: #679B9B;
+           color:#4AC6D0;
+           border: none;
+       }
+       
+      
+       

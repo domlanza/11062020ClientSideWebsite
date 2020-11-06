@@ -1,0 +1,23 @@
+/* Styling applied to item divs */
+
+.itemStyle {
+	margin: 0.5rem;
+	padding: 0.3rem;
+        background-color: grey;
+	height: 150px;
+}
+
+.itemStyle p {
+		display: inline-block;
+	margin: 3rem;
+}
+
+.itemStyle img {
+    float: middle;
+	   width: 70px;
+	display: inline-block;
+}
+
+.itemStyle h4 {
+	display: inline;
+}

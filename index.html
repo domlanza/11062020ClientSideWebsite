@@ -1,0 +1,150 @@
+<!--Dominic Lanza
+Professor Sally Kyvernitis
+CIS 3344
+Updated: 11/06/2020
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homemade Food Recipes</title>
+<!--External stylesheets-->
+<link rel="stylesheet" type="text/css" href="style/mystyle.css">
+<link href="style/dropdown.css" rel="stylesheet" type="text/css" />  
+<link href="style/cookieStyle.css" rel="stylesheet" type="text/css" /> 
+<link href="style/slideShow.css" rel="stylesheet" type="text/css" /> 
+<link href="style/TableStyle.css" rel="stylesheet" type="text/css" />  
+<link href="style/clicksort.css" rel="stylesheet" type="text/css" />  
+<!-- Reference the React CDNs (Content Delivery Networks, basically just a hosted web resource) -->
+<script crossorigin src='https://unpkg.com/react@16/umd/react.development.js'></script>
+<script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.development.js'></script>
+
+<!-- By referencing the Babel CDN, we can use JSX (HTML tags in JavaScript) --> 
+<script crossorigin src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+
+</head>
+<body>
+    <!--encompasses title div title*/-->
+    <div id="titleNav">
+        <div id="title">
+            Dom's Baking Addiction
+        </div>
+
+        <div id="nav">
+            <div class="dropdown">
+                <a href ="#/home">Home</a>
+            </div>
+            <div class="dropdown">
+                <div class="dropHeader">Account</div>
+                <div class="dropContent">
+                    <a>Register</a> <br/>
+                    <a>Log In</a> <br/>
+                    <a>Profile</a> <br/>
+                    <a>Log Out</a>
+                </div> 
+            </div>
+            <div class="dropdown">
+                <div class="dropHeader">Search</div>
+                <div class="dropContent">
+                    <a href= "#/UserTable"> Users</a> <br/>
+                    <a href= "#/CookieTable"> Cookies</a> <br/>
+                    <a>Recipes</a>
+                    <a href= "#/twoCars">JS Objects</a>
+                    <a href= "#/slideShows">SlideShow</a>  
+                    <a href= "#/UserTable">Users Table</a>  
+                    <a href= "#/CookieTable">Other Table</a>
+                    <a href= "#/usersAPI">User API</a>
+                    <a href= "#/otherAPI">Other API</a>
+                    <a><span onclick= "renderUsers()">Users React</span></a>
+                    <a<span onclick= "renderRecipes()">Recipes React</span></a>
+
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropHeader">Tutorial</div>
+                <div class="dropContent">
+                    <a href = "tutorial/proposal.pdf">Proposal</a> <br/>
+                    <a href = "tutorial/poc.html">Proof Of Concept</a> <br/>
+                    <a>Tutorial Home</a> <br/>
+                    <a>Demo</a> <br/>
+                </div> 
+            </div>          
+            <div class="dropdown">
+                <a href = "#/blog">Blog</a>
+            </div>
+        </div>
+    </div>
+    <!--titlenav div ends here-->
+    <!--content div begins here-->
+    <div id="myContent">
+    </div>
+    <!--        components for JavaScript-->
+    <script src="js/components/home.js"></script>
+    <script src="js/components/blog.js"></script>
+    <script src="js/components/twoCars.js"></script>
+    <script src="js/components/slideShows.js"></script>
+    <script src="js/components/UserTable.js"></script>
+    <script src="js/components/CookieTable.js"></script>
+    <script src="js/components/usersAPI.js"></script>
+    <script src="js/components/otherAPI.js"></script>
+
+
+    <script src="js/reusable/MakeTable.js"></script>
+    <script src="js/reusable/MakeCookie.js"></script>
+    <script src="js/reusable/dropdown.js"></script>
+    <script src="js/reusable/routeFw.js"></script>
+    <script src="js/reusable/MakeSlideShowNew.js"></script>
+
+    <script src="js/reusable/ajax.js"></script>
+    <script src="js/ajax_alt.js"></script>
+
+    <script type="text/babel" src="js/React/AjaxRecipeTable.js"></script>
+    <script type="text/babel" src="js/React/AjaxUserTable.js"></script>
+
+
+    <br/>   
+    <!--content div ends here-->
+    <div id="footer">
+        Dominic Lanza
+    </div>
+    <script type="text/babel">
+                        "use strict";
+                        window.onclick = function (event) {
+                            var clickedEle = event.target;
+                            dropdown(clickedEle);
+                        };
+                        "use strict";
+                        //Empty Array
+                        var myRoutes = [];
+
+                        //routing
+                        myRoutes['/'] = home;
+                        myRoutes['#/home'] = home;
+                        myRoutes['#/twoCars'] = twoCars;
+                        myRoutes['#/blog'] = blog;
+                        myRoutes['#/slideShows'] = slideShows;
+                        myRoutes['#/UserTable'] = UserTable;
+                        myRoutes['#/CookieTable'] = CookieTable;
+                        myRoutes['#/usersAPI'] = usersAPI;
+                        myRoutes['#/otherAPI'] = otherAPI;
+                        //call the routeFw and pass ids
+                        routeFw(myRoutes, "myContent", '#/home');
+
+                        "use strict";
+
+                        function renderUsers() {
+                            ReactDOM.render(
+                                    <AjaxUserTable />,
+                                    document.getElementById("myContent")
+                                    );
+                        }
+
+                        "use strict";
+
+                        function renderRecipes() {
+                            ReactDOM.render(
+                                    <AjaxRecipeTable />,
+                                    document.getElementById("myContent")
+                                    );
+                        }
+    </script>
+</body>
+</html>

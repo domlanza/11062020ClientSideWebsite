@@ -1,0 +1,152 @@
+html, body {  
+    margin:0; 
+    padding:0px; 
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+}
+
+body { 
+    padding-top: 6rem;
+    background-color: whitesmoke; 
+    color: black;  
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+    font-size:16px;
+}
+
+p {
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 12px;
+   
+    
+}
+#titleNav { 
+    display:flex;
+    flex-direction:column;
+    position: fixed; 
+    top:0px;
+    z-index: 1;    
+    width: 100%;  
+    z-index: 1;    
+    background-color: #4AC6D0;
+    color: white;
+    font-family: serif; 
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+#view{
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 10px;
+}
+
+#title { 
+    padding-bottom: 5px;
+    font-size: 2rem;
+    font-family:Pacifico;
+    white-space: nowrap;
+    padding-left: 80px;
+}
+
+#nav {
+    padding-top:22px;
+    float: right;
+    text-align: center;
+    font-size:1.5rem;
+}
+
+
+#nav a {  
+    text-decoration:none;   
+}
+
+/*//mouse over link*/
+a:hover{
+    color: black;
+}
+/*//unvisted link*/
+a:link{
+    color: cyan;
+}
+/*//visited link*/
+a:visted{
+    color: purple;
+}
+/*//selected link*/
+a:active{
+    color: yellow;
+}
+
+#recipe {
+    background-color: lightcyan;
+    font-size: 10px;
+    width:300px;
+    border: 5px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    padding-top: 10px;
+}
+
+#content {
+    padding:12px;
+    padding-top: 60px; 
+    padding-bottom: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#footer { 
+    position: fixed;
+    bottom: 0px; 
+    left: 0px; 
+    z-index: 1; 
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+    background-color: #4AC6D0;
+    color: white; 
+    width:100%;
+    text-align:center;
+    padding:8px;	
+}
+
+/*Min width so note that it's fliped*/
+@media only screen and (min-width: 600px) { 
+    
+    /*img class is .responsive*/
+    .responsive{
+        width: 100%;
+        height:auto;
+    }
+
+    #nav{
+        text-align: center;
+    }
+
+    #title{
+        padding-left:60px;
+    }
+
+    #titleNav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 3, 2020, 8:03:08 PM
+    Author     : dominiclanza
+*/
+

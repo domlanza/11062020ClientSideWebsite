@@ -1,0 +1,38 @@
+[
+    {
+        "nickname": "Oreo",
+        "image": "http://cis-linux2.temple.edu/~sallyk/pics_cat/pic4.png",
+        "birthYear": "2018",
+        "sex": "female"
+    },
+    {
+        "nickname": "HollyWood",
+        "image": "http://cis-linux2.temple.edu/~sallyk/pics_cat/pic5.png",
+        "birthYear": "2017",
+        "sex": "male"
+    },
+    {
+        "nickname": "Cullen",
+        "image": "http://cis-linux2.temple.edu/~sallyk/pics_cat/pic6.png",
+        "birthYear": "2019",
+        "sex": "female"
+    },
+    {
+        "nickname": "Mr.Nice Guy",
+        "image": "http://cis-linux2.temple.edu/~sallyk/pics_cat/pic7.png",
+        "birthYear": "2020",
+        "sex": "male"
+    },
+    {
+        "nickname": "tiger",
+        "image": "http://cis-linux2.temple.edu/~sallyk/pics_cat/pic8.png",
+        "birthYear": "2019",
+        "sex": "male"
+    },
+    {
+        "nickname": "Bobby",
+        "image": "http://cis-linux2.temple.edu/~sallyk/pics_cat/pic9.png",
+        "birthYear": "2020",
+        "sex": "female"
+    }
+]

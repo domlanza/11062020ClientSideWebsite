@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+ 
+}
+
+.bg-image {
+  /* Full height */
+  height: 50%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("https://hips.hearstapps.com/delish/assets/17/32/1502397750-delish-death-by-chocolate-cake-3.jpg"); }
+.img2 { background-image: url("https://images-gmi-pmc.edge-generalmills.com/165f3d2f-0610-40a6-abf8-478fb850be7c.jpg"); }
+.img3 { background-image: url("https://hips.hearstapps.com/delish/assets/17/32/1502397750-delish-death-by-chocolate-cake-3.jpg"); }
+.img4 { background-image: url("https://www.amusingfoodie.com/wp-content/uploads/2014/01/Snickerdoodles-Cooling-720x405.png"); }
+.img5 { background-image: url("https://images-gmi-pmc.edge-generalmills.com/165f3d2f-0610-40a6-abf8-478fb850be7c.jpg"); }
+.img6 { background-image: url("https://i.ytimg.com/vi/7VTtenyKRg4/maxresdefault.jpg"); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 425px;
+  padding: 20px;
+  text-align: center;
+}
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+img {
+    border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+</style>
+</head>
+<body>
+<div class="bg-image img1"></div>
+<div class="bg-image img2"></div>
+<div class="bg-image img3"></div>
+<div class="bg-image img4"></div>
+<div class="bg-image img5"></div>
+<div class="bg-image img6"></div>
+
+<div class="bg-text">Welcome</div>
+
+<h1>Rate These So We Can Learn More About You</h1>
+<p>Drag the slider to show how much you like this food.</p>
+
+<img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/2/4/2/RX-FNM_030111-Sugar-Fix-005_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371597326801.jpeg" alt="Italian Tiramusu" class="center">
+
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+</body>
+
+</html>
